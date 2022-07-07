@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -24,6 +25,11 @@ public class Tema {
 		private Long id; 
 		
 		@NotNull
+		@Size(min = 1, max = 100)
+		private String nome;
+		
+		
+		@NotNull
 		private String descricao; 
 		
 		@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -36,6 +42,12 @@ public class Tema {
 		}
 		public void setId(Long id) {
 			this.id = id;
+		}
+		public String getNome() {
+			return nome;
+		}
+		public void setNome(String nome) {
+			this.nome = nome;
 		}
 		public String getDescricao() {
 			return descricao;
