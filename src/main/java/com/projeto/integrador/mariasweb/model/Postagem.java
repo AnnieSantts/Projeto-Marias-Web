@@ -40,7 +40,7 @@ public class Postagem {
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
-	private Usuario usuarios;
+	private Usuario usuario;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
