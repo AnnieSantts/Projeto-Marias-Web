@@ -30,6 +30,7 @@ public class Tema {
 		
 		
 		@NotNull
+		@Size(min = 1, max = 500)
 		private String descricao; 
 		
 		@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)

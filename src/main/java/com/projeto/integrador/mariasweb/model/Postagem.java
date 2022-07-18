@@ -32,7 +32,7 @@ public class Postagem {
 	private String titulo;
 	
 	@NotNull
-	@Size(min = 10, max = 500)
+	@Size(min = 10, max = 1000)
 	private String texto;
 	
 	@UpdateTimestamp
